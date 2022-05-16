@@ -11,7 +11,7 @@ struct ItemDetail: View {
     @ObservedObject var viewModel: ViewModel
     
     var item: Item {
-        self.viewModel.selectedItem!
+        self.viewModel.selectedItem ?? Item(login: "", avatar_url: "", type: "")
     }
     
     var body: some View {
